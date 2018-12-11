@@ -11757,13 +11757,14 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[187]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span><span class="p">,</span> <span class="n">cross_val_score</span>
 </pre></div>
 
 </div>
@@ -11782,7 +11783,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[188]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#load data with pandas</span>
@@ -11796,7 +11797,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[189]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#example</span>
@@ -11811,7 +11812,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[189]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -11969,7 +11970,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[190]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataDyad</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">dataDyad</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">27</span><span class="p">]],</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -11982,7 +11983,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[191]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#now the data looks likt this:</span>
@@ -11997,7 +11998,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[191]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12050,7 +12051,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[192]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#combine all instances of one player into one entry. Add all cards and games in the process</span>
@@ -12066,7 +12067,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[193]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#transform birthday to age:</span>
@@ -12083,7 +12084,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[194]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">ix</span><span class="p">[:</span><span class="mi">19</span><span class="p">,[</span><span class="s1">&#39;rater1&#39;</span><span class="p">,</span><span class="s1">&#39;rater2&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">T</span>
@@ -12097,7 +12098,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[194]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12184,7 +12185,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[195]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">ix</span><span class="p">[:,</span><span class="s1">&#39;rater1&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">data</span><span class="o">.</span><span class="n">ix</span><span class="p">[:,</span><span class="s1">&#39;rater2&#39;</span><span class="p">])),</span><span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">ix</span><span class="p">[:,</span><span class="s1">&#39;rater1&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">data</span><span class="o">.</span><span class="n">ix</span><span class="p">[:,</span><span class="s1">&#39;rater2&#39;</span><span class="p">]))</span>
@@ -12198,7 +12199,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[195]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12223,7 +12224,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[196]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">ix</span><span class="p">[:,</span><span class="s1">&#39;rater1&#39;</span><span class="p">]))</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">ix</span><span class="p">[:,</span><span class="s1">&#39;rater1&#39;</span><span class="p">])</span>
@@ -12237,7 +12238,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[196]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12262,7 +12263,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[197]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#drop dyads with no skin color rating</span>
@@ -12276,7 +12277,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[198]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">leagues</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">ix</span><span class="p">[:,</span><span class="s1">&#39;leagueCountry&#39;</span><span class="p">])</span>
@@ -12355,7 +12356,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[199]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#create column for each country, set 1 if player is playing in that league and 0 if not</span>
@@ -12372,7 +12373,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[200]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#calculate labels...</span>
@@ -12388,7 +12389,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[201]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#centralization of the data:</span>
@@ -12403,7 +12404,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[202]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#that&#39;s how the data looks now</span>
@@ -12418,7 +12419,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[202]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12527,7 +12528,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[205]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">linearReg</span><span class="p">:</span>       
@@ -12564,7 +12565,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[271]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
@@ -12592,7 +12593,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[298]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#since our solution to the 4th exercise was not working we took the solution from moodle and adjusted it </span>
@@ -12645,7 +12646,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[299]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_regression_split_node</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">feature_indices</span><span class="p">):</span>
@@ -12709,7 +12710,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[310]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_regression_leaf_node</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
@@ -12727,7 +12728,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[293]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#forest</span>
@@ -12753,12 +12754,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[289]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#crossvalidation</span>
-<span class="n">X</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span><span class="p">,</span> <span class="n">cross_val_score</span>
 <span class="k">def</span> <span class="nf">cross_validation</span><span class="p">(</span><span class="n">methode</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">num_sample</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">out</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Measure the correct accuracy with cross validation</span>
@@ -12789,7 +12788,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[312]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">unscatterdMeanLin</span><span class="o">=</span><span class="n">cross_validation</span><span class="p">(</span><span class="n">linearReg</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">labels</span><span class="p">,</span><span class="n">out</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">unscatterdMeanLin</span><span class="o">=</span><span class="n">cross_validation</span><span class="p">(</span><span class="n">linearReg</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">labels</span><span class="p">,</span><span class="n">out</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12860,7 +12860,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[221]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#permutation test</span>
@@ -12962,6 +12962,510 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The result of the permutation test is that the skin color is <em>not</em> dependent on whether a player receives a red card. In all the 5 instances that voted against a color bias the Regression Forest dissagreed with the Linear Regression method. Since the Linear Regression is a fairly simple model it could be at its limits. Another possibility is that the permutation did not change many skin color values because we only have 5 distinct skin color values, so the possibility that a player gets the same or a similar skin color is quite high, which if a bias existed could be detected by our models.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="other-data-preperation">other data preperation<a class="anchor-link" href="#other-data-preperation">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#load data again</span>
+<span class="n">dataDyad</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/CrowdstormingDataJuly1st.csv&#39;</span><span class="p">)</span>
+<span class="c1">#drop other features than before: keep height and weight. They might influence the play and therefor the frequency of a red card</span>
+<span class="c1">#also don&#39;t drop the position</span>
+<span class="n">dataDyad</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">dataDyad</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">27</span><span class="p">]],</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#combine again all instances of one player into one entry. Add all cards and games in the process</span>
+<span class="n">players</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">dataDyad</span><span class="p">[</span><span class="s1">&#39;playerShort&#39;</span><span class="p">])</span> <span class="c1">#all the player names</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">dataDyad</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">dataDyad</span><span class="p">[</span><span class="s1">&#39;playerShort&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;playerShort&#39;</span><span class="p">:</span><span class="s1">&#39;first&#39;</span><span class="p">,</span><span class="s1">&#39;leagueCountry&#39;</span><span class="p">:</span><span class="s1">&#39;first&#39;</span><span class="p">,</span> <span class="s1">&#39;birthday&#39;</span><span class="p">:</span><span class="s1">&#39;first&#39;</span><span class="p">,</span>
+                                                      <span class="s1">&#39;height&#39;</span><span class="p">:</span><span class="s1">&#39;first&#39;</span><span class="p">,</span><span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="s1">&#39;first&#39;</span><span class="p">,</span><span class="s1">&#39;position&#39;</span><span class="p">:</span><span class="s1">&#39;first&#39;</span><span class="p">,</span>
+                                                      <span class="s1">&#39;games&#39;</span><span class="p">:</span> <span class="s1">&#39;sum&#39;</span><span class="p">,</span> <span class="s1">&#39;redCards&#39;</span><span class="p">:</span> <span class="s1">&#39;sum&#39;</span><span class="p">,</span><span class="s1">&#39;rater1&#39;</span><span class="p">:</span><span class="s1">&#39;first&#39;</span><span class="p">,</span><span class="s1">&#39;rater2&#39;</span><span class="p">:</span><span class="s1">&#39;first&#39;</span><span class="p">})</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#transform birthday to age:</span>
+<span class="c1">#season: 2012-2013, so at the end it was 2013</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;birthday&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="mi">2013</span><span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]))</span>
+<span class="c1">#we can now drop the birthday column</span>
+<span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;birthday&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#drop dyads with no skin color rating</span>
+<span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;rater1&#39;</span><span class="p">]))],</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1">#the new features height and weight also have nan entries</span>
+<span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;height&#39;</span><span class="p">]))],</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;weight&#39;</span><span class="p">]))],</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[117]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#create column for each country, set 1 if player is playing in that league and 0 if not</span>
+<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">leagues</span><span class="p">:</span>
+    <span class="n">data</span><span class="p">[</span><span class="n">country</span><span class="p">]</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;leagueCountry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="nb">int</span><span class="p">(</span><span class="n">country</span><span class="o">==</span><span class="n">x</span><span class="p">))</span>
+<span class="c1">#we can now drop the leagueCountry column</span>
+<span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;leagueCountry&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#introduce a one hot encoding for the position</span>
+<span class="n">positions</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">dataDyad</span><span class="o">.</span><span class="n">ix</span><span class="p">[:,</span><span class="s1">&#39;position&#39;</span><span class="p">])</span>
+<span class="n">positions</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">positions</span><span class="p">)]</span><span class="o">=</span><span class="s1">&#39;None&#39;</span> <span class="c1">#first get rid of the float</span>
+<span class="n">positions</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">positions</span><span class="p">)</span> <span class="c1">#now we have all of them</span>
+
+<span class="c1">#create column for each position, set 1 if player is playing in that position and 0 if not</span>
+<span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="n">positions</span><span class="p">:</span>
+    <span class="n">data</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;position&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="nb">int</span><span class="p">(</span><span class="n">pos</span><span class="o">==</span><span class="n">x</span><span class="p">))</span>
+<span class="c1">#we can now drop the positions column</span>
+<span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;position&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#calculate labels...</span>
+<span class="n">labels</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;redCards&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;games&#39;</span><span class="p">]</span>
+<span class="c1">#...and drop all card related columns</span>
+<span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;playerShort&#39;</span><span class="p">,</span><span class="s1">&#39;games&#39;</span><span class="p">,</span><span class="s1">&#39;redCards&#39;</span><span class="p">],</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[120]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#that&#39;s how the data looks now</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[120]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>height</th>
+      <th>weight</th>
+      <th>rater1</th>
+      <th>rater2</th>
+      <th>age</th>
+      <th>England</th>
+      <th>France</th>
+      <th>Germany</th>
+      <th>Spain</th>
+      <th>Attacking Midfielder</th>
+      <th>...</th>
+      <th>Center Midfielder</th>
+      <th>Defensive Midfielder</th>
+      <th>Goalkeeper</th>
+      <th>Left Fullback</th>
+      <th>Left Midfielder</th>
+      <th>Left Winger</th>
+      <th>None</th>
+      <th>Right Fullback</th>
+      <th>Right Midfielder</th>
+      <th>Right Winger</th>
+    </tr>
+    <tr>
+      <th>playerShort</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>aaron-hughes</th>
+      <td>182.0</td>
+      <td>71.0</td>
+      <td>0.25</td>
+      <td>0.00</td>
+      <td>34</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>aaron-hunt</th>
+      <td>183.0</td>
+      <td>73.0</td>
+      <td>0.00</td>
+      <td>0.25</td>
+      <td>27</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>aaron-lennon</th>
+      <td>165.0</td>
+      <td>63.0</td>
+      <td>0.25</td>
+      <td>0.25</td>
+      <td>26</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>aaron-ramsey</th>
+      <td>178.0</td>
+      <td>76.0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>23</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>abdelhamid-el-kaoutari</th>
+      <td>180.0</td>
+      <td>73.0</td>
+      <td>0.25</td>
+      <td>0.25</td>
+      <td>23</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 22 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[121]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#centralization of the data:</span>
+<span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">X</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">labels</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">labels</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">labels</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Retry-with-new-set-of-data">Retry with new set of data<a class="anchor-link" href="#Retry-with-new-set-of-data">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[122]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">unscatterdMeanLinNew</span><span class="o">=</span><span class="n">cross_validation</span><span class="p">(</span><span class="n">linearReg</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">labels</span><span class="p">,</span><span class="n">out</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>linearReg Mean squared test error: 4.974823e-05 +/- 1.609284e-05
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[123]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#test models:</span>
+<span class="n">unscatterdMeanTreeNew</span><span class="o">=</span><span class="n">cross_validation</span><span class="p">(</span><span class="n">RegForest</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">labels</span><span class="p">,</span><span class="n">out</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>RegForest Mean squared test error: 7.043198e-05 +/- 1.871536e-05
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[124]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">count</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">tree</span><span class="p">,</span><span class="n">lin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">19</span><span class="p">):</span>
+    <span class="c1">#permute skin color features:</span>
+    <span class="n">X</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">shuffleSkinColors</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+    <span class="n">meanLin</span><span class="o">=</span><span class="n">cross_validation</span><span class="p">(</span><span class="n">linearReg</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">labels</span><span class="p">)</span>
+    <span class="n">meanTree</span><span class="o">=</span><span class="n">cross_validation</span><span class="p">(</span><span class="n">RegForest</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">labels</span><span class="p">,</span><span class="n">num_sample</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="c1">#if the error is larger than the one of the original dataset we add one to the count</span>
+    <span class="k">if</span> <span class="n">meanLin</span><span class="o">&gt;</span><span class="n">unscatterdMeanLinNew</span> <span class="ow">and</span> <span class="n">meanTree</span><span class="o">&gt;</span><span class="n">unscatterdMeanTreeNew</span><span class="p">:</span>
+         <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">meanLin</span><span class="o">&gt;</span><span class="n">unscatterdMeanLinNew</span><span class="p">:</span>
+        <span class="n">tree</span><span class="o">+=</span><span class="mi">1</span> <span class="c1">#Regression Tree says error is smaller than before</span>
+    <span class="k">elif</span> <span class="n">meanTree</span><span class="o">&gt;</span><span class="n">unscatterdMeanTreeNew</span><span class="p">:</span>
+        <span class="n">lin</span><span class="o">+=</span><span class="mi">1</span> <span class="c1">#Linear Regression says error is smaller than before</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%.2f</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">19</span><span class="p">),</span><span class="s1">&#39;</span><span class="si">% d</span><span class="s1">one&#39;</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>100.00 % done</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[125]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">count</span><span class="o">==</span><span class="mi">19</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Skin color bias (19/19 for color bias)&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No skin color bias (</span><span class="si">%i</span><span class="s1">/19 for color bias)&#39;</span><span class="o">%</span><span class="k">count</span>)
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%i</span><span class="s1"> times did the Regression Tree conclude the error is smaller than before and the Linear Regression disagrees&#39;</span><span class="o">%</span><span class="k">tree</span>)
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%i</span><span class="s1"> times did the Linear Regression conclude the error is smaller than before and the Regression Tree disagrees&#39;</span><span class="o">%</span><span class="k">lin</span>)
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%i</span><span class="s1"> times they both agreed that the errors became smaller&#39;</span><span class="o">%</span><span class="p">(</span><span class="mi">19</span><span class="o">-</span><span class="n">count</span><span class="o">-</span><span class="n">tree</span><span class="o">-</span><span class="n">lin</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>No skin color bias (10/19 for color bias)
+4 times did the Regression Tree conclude the error is smaller than before and the Linear Regression disagrees
+4 times did the Linear Regression conclude the error is smaller than before and the Regression Tree disagrees
+1 times they both agreed that the errors became smaller
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The grade of bias is lower than befor. That could be because we now included more features that influence the play style of a certain player. For example a more heavy player can foul another player more easily than a light player because of the momentum each player can transfer to the opponent. This is only a guess since I am no expert. It also could be that the lighter player needs to play more aggressivley to make an impact, leading to a higher rate of red cards. It carries information we didn't have befor so we don't need to rely on the skin color feature if not necessary.</p>
+<p>This dataset could not get an opposing result but it showed nonetheless that the data preperation is an important and influential step of statistical analysis.</p>
 
 </div>
 </div>
